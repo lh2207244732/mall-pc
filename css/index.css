@@ -1,0 +1,103 @@
+/* 顶部导航
+---------------------------------------------------------------- */
+.top{
+    height: 30px;
+    line-height: 30px;
+    background-color: #f3f3f3;
+}
+.top .user-info{
+    float: left;
+}
+.top .nav-list{
+    float: right;
+}
+.top .nav-list .nav-item{
+    float: left;
+    margin-right: 10px;
+}
+.top .nav-list .nav-item .icon-cart{
+    font-size: 12px;
+}
+/* 头部搜索
+---------------------------------------------------------------- */
+.header{
+    height: 100px;
+    background-color: #fff;
+}
+.header .logo{
+    float: left;
+    line-height: 100px;
+}
+.header .logo a{
+    font-size: 30px;
+    color: #52c41a;
+    font-weight: bold;
+}
+.header .search-wrap{
+    float: left;
+}
+.header .search-wrap .search-box{
+    margin-top: 18px;
+}
+.header .search-wrap .nav-list{
+    margin-top: 10px;
+}
+.header .search-wrap .search-input{
+    width: 400px;
+    height: 38px;
+    line-height: 38px;
+    border: 2px solid #52c41a;
+    font-size: 16px;
+    padding-left: 10px;
+    float: left;
+}
+.header .search-wrap .search-input:focus{
+    outline-style: none;
+    outline-color: #52c41a;
+}
+.header .search-wrap .search-btn{
+    height: 42px;
+    width: 100px;
+    line-height: 42px;
+    text-align: center;
+    background-color:#52c41a;
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.header .search-wrap .search-btn:hover{
+    opacity: .7;
+}
+.header .nav-list .nav-item{
+    float: left;
+    margin-right: 20px;
+}
+.header .nav-list .nav-item a{
+    font-size: 16px;
+    font-weight: 200;
+}
+/* 焦点区域
+---------------------------------------------------------------- */
+.focus{
+    height: 440px;
+    background-color: tomato;
+}
+/* 热销区域
+---------------------------------------------------------------- */
+.hot{
+    height: 300px;
+    background-color: blue;
+}
+/* 楼层
+---------------------------------------------------------------- */
+.floor{
+    height: 600px;
+    background-color: yellow;
+}
+/* 底部
+---------------------------------------------------------------- */
+.footer{
+    height: 252px;
+    background-color: black;
+}
