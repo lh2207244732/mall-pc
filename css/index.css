@@ -162,18 +162,89 @@
 /* 热销区域
 ---------------------------------------------------------------- */
 .hot{
+   margin-bottom: 40px;
+}
+.hot .hot-card{
+    float: left;
     height: 300px;
-    background-color: blue;
+    background-image:linear-gradient(#007aff,#52c41a);
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 80px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+}
+.hot .hot-card .icon-cart{
+    font-size: 40px;
+}
+.hot .product-list{
+    float: left;
+}
+.hot .product-list .product-item:last-child{
+    margin-right: 0;
 }
 /* 楼层
 ---------------------------------------------------------------- */
-.floor{
-    height: 600px;
-    background-color: yellow;
+.floor .floor-wrap{
+    margin-bottom: 20px;
+}
+.floor .floor-title h2{
+    font-size: 18px;
+    color: #52c41a;
+    border-bottom: 2px solid #52c41a;
+}
+.floor .floor-title{
+    margin-bottom: 15px;
+}
+.floor .product-list .product-item:nth-child(5n+0){
+    margin-right: 0;
+}
+.floor .product-list .product-item{
+    margin-bottom: 15px;
 }
 /* 底部
 ---------------------------------------------------------------- */
 .footer{
-    height: 252px;
-    background-color: black;
+    background-color: #2f2f2f;
+    padding-bottom: 50px;
+}
+.footer .promise-box{
+    font-size: 20px;
+    color: #fff;
+    padding: 50px 20px;
+    border-bottom: 1px solid #3d3d3d;
+    margin-bottom: 20px;
+}
+.footer .promise-box .icon{
+    display: inline-block;
+    background-image: url(../images/us-icon.png);
+    background-repeat: no-repeat;
+    height: 40px;
+    background-position: left 0;
+    padding-left: 60px;
+    line-height: 40px;
+}
+.footer .promise-box .icon1{
+    background-position: left 0;
+    margin-right: 230px;
+}
+.footer .promise-box .icon2{
+    background-position: 0 -42px;
+    margin-right: 230px; 
+}
+.footer .promise-box .icon3{
+    background-position: 0 -84px;
+}
+.footer .links{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer .links a{
+    color: #888;
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #999;
 }

@@ -34,3 +34,36 @@ margin-right: 10px;
 .clearfix{
     *zoom: 1;
 }
+/* 商品共通样式 */
+ .product-list .product-item{
+    float: left;
+    height: 300px;
+    background-color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    transition: all 0.3s;
+}
+
+.product-list .product-item:hover{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+}
+ .product-list .product-item .product-name{
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+ .product-list .product-item .product-price{
+    float: left;
+    font-size: 14px;
+    color: #f21;
+}
+ .product-list .product-item .paynum{
+    float: right;
+    font-size: 14px;
+    color: #aaa;
+}
