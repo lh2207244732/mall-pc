@@ -186,6 +186,7 @@
     height: 440px;
     background-color: #fff;
     float: left;
+    position: relative;
 }
 .focus .categories .parent-categories{
     padding-top: 20px;
@@ -195,12 +196,53 @@
     padding-left: 10px;
     height: 40px;
     line-height: 40px;
+    cursor: pointer;
 }
 .focus .categories .parent-categories .parent-categories-item .keyword-item{
     font-size: 14px;
 }
 .focus .categories .parent-categories .parent-categories-item:hover{
     background-color: #eee;
+}
+.focus .categories .parent-categories .parent-categories-item.active{
+    background-color: #eee;
+    color:#1890ff;
+}
+.focus .categories .child-categories{
+    display: none;
+    position: absolute;
+    top:0;
+    left:208px;
+    width: 872px;
+    height: 100%;
+    z-index: 2000;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+.focus .categories .child-categories .loader{
+    margin-top: 200px;
+}
+.focus .categories .child-item{
+    padding: 10px;
+    width: 80px;
+    float: left;
+    margin:0 10px 10px 0;
+}
+.focus .categories .child-item  img{
+    width: 100%;
+    height: 80px;
+}
+.focus .categories .child-item  p{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .focus .swiper{
     height: 440px;
@@ -241,7 +283,7 @@
     right: 0;
 }
 .focus .swiper .btn-wrap{
-    width: 105px;
+    width: 175px;
     position: absolute;
     bottom: 10px;
     left: 50%;

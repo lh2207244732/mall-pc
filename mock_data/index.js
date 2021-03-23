@@ -42,5 +42,35 @@ if (USE_MOCK) {
             }
         ]
     })
+    Mock.mock('/categories/arrayCategories', 'get', {
+        "code": 0,
+        "data|10": [
+            {
+                "level": 1,
+                "isShow": "1",
+                "isFloor": "0",
+                "order": 0,
+                "_id": "@string('lower',24)",
+                "name": "@cword(4)",
+                "mobileName": "@cword(4)",
+                "icon": "@dataImage('200x200')"
+            }
+        ]
+    })
+    Mock.mock(/\/categories\/childArrayCategories/, 'get', {
+        "code": 0,
+        "data|1-15": [
+            {
+                "level": 2,
+                "isShow": "1",
+                "isFloor": "0",
+                "order": 0,
+                "_id": "@string('lower',24)",
+                "name": "@cword(4)",
+                "mobileName": "@cword(4)",
+                "icon": "@dataImage('200x200')"
+            }
+        ]
+    })
 
 }

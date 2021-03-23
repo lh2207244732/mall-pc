@@ -7,10 +7,19 @@
             this.searchBtn = document.querySelector('.search-btn')
             this.searchInput = document.querySelector('.search-input')
             this.searchLayer = document.querySelector('.search-layer')
+            this.categories = d.querySelector('.categories')
+            this.parentCategories = document.querySelector('.parent-categories')
+            this.childCategories = d.querySelector('.child-categories')
+
             this.searchTimer = null
+            this.categoriesTimer = null
             this.isSearchLayerEmpty = true
+            this.parentCategoriesItem = null
+            this.parentCategoriesItem = null
+            this.lastActiveIndex = 0
             this.handleCart()
             this.handleSearch()
+            this.handleCategories()
 
         },
         loadCartCount: function () {
@@ -105,6 +114,15 @@
             this.searchInput.addEventListener('click', function (event) {
                 event.stopPropagation()
             }, false)
+            //用事件代理处理动态提示层的提交
+            this.searchLayer.addEventListener('click', function (ev) {
+                var elem = ev.target
+                if (elem.className == 'search-item') {
+                    var keyword = elem.innerText
+                    _this.searchInput.value = keyword
+                    _this.submitSearch()
+                }
+            }, false)
         },
         submitSearch: function () {
             var keyword = this.searchInput.value
@@ -129,12 +147,11 @@
                     }
                 },
                 error: function (status) {
-                    console.log(status)
+                    console.log('获取出错啦')
                 }
             })
         },
         renderSearchLayer: function (list) {
-            console.log(list)
             var len = list.length
             var html = ''
             if (len > 0) {
@@ -153,6 +170,106 @@
                 utils.hide(this.searchLayer)
                 this.searchLayer.innerHTML = html
                 this.isSearchLayerEmpty = false
+            }
+        },
+        handleCategories: function () {
+            var _this = this
+            // 获取父级分类
+            this.getParentCategoriesData()
+            // 用事件代理的方式处理父级分类项目的切换
+            this.categories.addEventListener('mouseover', function (event) {
+                if (!_this.parentCategoriesItem) {
+                    return
+                }
+                if (_this.categoriesTimer) {
+                    clearTimeout(_this.categoriesTimer)
+                }
+                _this.categoriesTimer = setTimeout(function () {
+                    var elem = event.target
+                    if (elem.className == 'parent-categories-item') {
+                        utils.show(_this.childCategories)
+                        var pid = elem.getAttribute('data-id')
+                        var index = elem.getAttribute('data-index')
+                        _this.getChildCategoriesData(pid)
+                        _this.parentCategoriesItem[_this.lastActiveIndex].className = 'parent-categories-item'
+                        _this.parentCategoriesItem[index].className = 'parent-categories-item active'
+                        _this.lastActiveIndex = index
+                    }
+                }, 100)
+            }, false)
+            this.categories.addEventListener('mouseleave', function (event) {
+                if (!_this.parentCategoriesItem) {
+                    return
+                }
+                if (_this.categoriesTimer) {
+                    clearTimeout(_this.categoriesTimer)
+                }
+                utils.hide(_this.childCategories)
+                _this.childCategories.innerHTML = ''
+                _this.parentCategoriesItem[_this.lastActiveIndex].className = 'parent-categories-item'
+            }, false)
+        },
+        getParentCategoriesData: function () {
+            var _this = this
+            utils.ajax({
+                method: 'get',
+                url: '/categories/arrayCategories',
+                success: function (data) {
+                    if (data.code == 0) {
+                        _this.renderParentCategories(data.data)
+                    }
+                },
+                error: function (status) {
+                    console.log(status)
+                }
+            })
+        },
+        getChildCategoriesData: function (pid) {
+            var _this = this
+            this.childCategories.innerHTML = '<div class="loader"></div>'
+            utils.ajax({
+                method: 'get',
+                url: '/categories/childArrayCategories',
+                data: {
+                    pid: pid
+                },
+                success: function (data) {
+                    console.log(data)
+                    if (data.code == 0) {
+                        _this.renderChildCategories(data.data)
+                    }
+                },
+                error: function (status) {
+                    console.length(status)
+                }
+            })
+        },
+        renderParentCategories: function (list) {
+            var len = list.length
+            if (len > 0) {
+                var html = '<ul>'
+                for (var i = 0; i < len; i++) {
+                    html += ' <li class="parent-categories-item" data-id="' + list[i]._id + '" data-index="' + i + '" >' + list[i].name + '</li>'
+                }
+                html += '</ul>'
+                this.parentCategories.innerHTML = html
+            }
+            this.parentCategoriesItem = d.querySelectorAll('.parent-categories-item')
+        },
+        renderChildCategories: function (list) {
+            var len = list.length
+            if (len > 0) {
+                var html = '<ul>'
+                for (var i = 0; i < len; i++) {
+                    html += ` <li class="child-item">
+                    <a href="#">
+                        <img src="${list[i].icon}" alt="">
+                        <p>${list[i].name}</p>
+                    </a>
+                </li>`
+                }
+                html += '</ul>'
+                this.childCategories.innerHTML = html
             }
         }
     }
