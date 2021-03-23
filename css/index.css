@@ -13,9 +13,82 @@
 .top .nav-list .nav-item{
     float: left;
     margin-right: 10px;
+    padding: 0 5px;
+}
+.top .nav-list .nav-item:hover{
+    background-color: #fff;
 }
 .top .nav-list .nav-item .icon-cart{
     font-size: 12px;
+}
+.top .nav-list .cart-box{
+    position: relative;
+}
+.top .nav-list .cart-box .cart-content{
+    display: none;
+    position: absolute;
+    top:30px;
+    right: 0;
+    width: 400px;
+    min-height: 100px;
+    z-index: 9999;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 10px;
+    margin-left: -5px;
+    border: 1px solid #eee;
+    border-top: none;
+}
+.top .nav-list .cart-box .loader{
+    margin-top: 40px;
+}
+.top .nav-list .cart-box .empty-cart{
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.top .nav-list .cart-item a{
+    float: left;
+}
+.top .nav-list .cart-item{
+    margin-bottom: 10px;
+}
+
+.top .nav-list .cart-item img{
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.top .nav-list .cart-item  span{
+    display: inline-block;
+    width: 170px;
+}
+.top .nav-list .cart-item .product-price{
+    float: right;
+    width: 60px;
+    color: #f21;
+    margin-right: 10px;
+}
+.top .nav-list .cart-item .product-count{
+    float: right;
+    width: 40px;
+}
+.top .nav-list .cart-tip{
+    color: rgba(0, 0, 0, 0.85); ;
+    font-weight: 800;
+}
+.top .nav-list .line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+    margin: 10px 0;
+}
+.top .nav-list .cart-btn{
+    width: 120px;
+    float: right;
 }
 /* 头部搜索
 ---------------------------------------------------------------- */
@@ -37,6 +110,7 @@
     float: left;
 }
 .header .search-wrap .search-box{
+    position: relative;
     margin-top: 18px;
 }
 .header .search-wrap .nav-list{
@@ -76,6 +150,32 @@
 .header .nav-list .nav-item a{
     font-size: 16px;
     font-weight: 200;
+}
+.header .search-wrap .search-box .search-layer{
+    display: none;
+    width: 414px ;
+    position: absolute;
+    top:42px;
+    left:0;
+    border: 1px solid #52c41a;
+    border-top: none;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 999;
+}
+.header .search-wrap .search-box .search-item{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.header .search-wrap .search-box .search-item:hover{
+    background-color: #f3f5f7;
 }
 /* 焦点区域
 ---------------------------------------------------------------- */
