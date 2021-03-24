@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="libs/carousel/carousel.css">
 </head>
 
 <body>
@@ -81,25 +82,8 @@
                 <div class="child-categories">
                 </div>
             </div>
-            <div class="swiper col-4">
-                <ul class="img-wrap">
-                    <li class="img-item">
-                        <img src="images/c1.jpg" alt="">
-                    </li>
-                    <li class="img-item">
-                        <img src="images/c2.jpg" alt="">
-                    </li>
-                    <li class="img-item">
-                        <img src="images/c3.jpg" alt="">
-                    </li>
-                </ul>
-                <span class="arrow arrow-left">&lt;</span>
-                <span class="arrow arrow-right">&gt;</span>
-                <ul class="btn-wrap">
-                    <li class="btn active"></li>
-                    <li class="btn"></li>
-                    <li class="btn"></li>
-                </ul>
+            <div class="col-4" id="swiper">
+
             </div>
         </div>
         <!-- 焦点区域结束 -->
@@ -110,342 +94,12 @@
                 <i class="iconfont icon-cart"></i>
             </div>
             <ul class="product-list col-4">
-                <li class="product-item col-1 col-gap">
-                    <a href="#">
-                        <img width="180px" height="180px"
-                            src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                            alt="">
-                        <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC 游戏手机
-                        </p>
-                        <p class="product-price-paynum">
-                            <span class="product-price">&yen; 3999</span>
-                            <span class="paynum">99人已经购买</span>
-                        </p>
-                    </a>
-                </li>
-                <li class="product-item col-1 col-gap">
-                    <a href="#">
-                        <img width="180px" height="180px"
-                            src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                            alt="">
-                        <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC 游戏手机
-                        </p>
-                        <p class="product-price-paynum">
-                            <span class="product-price">&yen; 3999</span>
-                            <span class="paynum">99人已经购买</span>
-                        </p>
-                    </a>
-                </li>
-                <li class="product-item col-1 col-gap">
-                    <a href="#">
-                        <img width="180px" height="180px"
-                            src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                            alt="">
-                        <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC 游戏手机
-                        </p>
-                        <p class="product-price-paynum">
-                            <span class="product-price">&yen; 3999</span>
-                            <span class="paynum">99人已经购买</span>
-                        </p>
-                    </a>
-                </li>
-                <li class="product-item col-1 col-gap">
-                    <a href="#">
-                        <img width="180px" height="180px"
-                            src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                            alt="">
-                        <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC 游戏手机
-                        </p>
-                        <p class="product-price-paynum">
-                            <span class="product-price">&yen; 3999</span>
-                            <span class="paynum">99人已经购买</span>
-                        </p>
-                    </a>
-                </li>
             </ul>
         </div>
         <!-- 热销区域结束 -->
         <!-- 楼层开始 -->
         <div class="floor">
-            <div class="floor-wrap">
-                <div class="floor-title">
-                    <a href="#">
-                        <h2>F1 电脑耗材</h2>
-                    </a>
-                </div>
-                <ul class="product-list clearfix">
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="floor-wrap">
-                <div class="floor-title">
-                    <a href="#">
-                        <h2>F2 家用电器</h2>
-                    </a>
-                </div>
-                <ul class="product-list clearfix">
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="floor-wrap">
-                <div class="floor-title">
-                    <a href="#">
-                        <h2>F3 美妆</h2>
-                    </a>
-                </div>
-                <ul class="product-list clearfix">
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="product-item col-1 col-gap">
-                        <a href="#">
-                            <img width="180px" height="180px"
-                                src="https://img14.360buyimg.com/seckillcms/s280x280_jfs/t1/171510/35/3269/77005/60069928E3aaddc3e/ca1c6e2cd7aaf6ea.jpg.webp"
-                                alt="">
-                            <p class="product-name">魅族17 8GB+256GB AG 梦幻独角兽 骁龙865 旗舰5G手机 30W快充 6400W后置主摄 90Hz屏幕 支持NFC
-                                游戏手机
-                            </p>
-                            <p class="product-price-paynum">
-                                <span class="product-price">&yen; 3999</span>
-                                <span class="paynum">99人已经购买</span>
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
         </div>
         <!-- 楼层结束 -->
         <!-- 底部开始 -->
@@ -465,11 +119,26 @@
             </div>
         </div>
         <!-- 底部结束 -->
+        <!-- 电梯部分开始 -->
+        <div id="elevator" class="elevator container">
+
+            <!-- <a href="javascript:;" class="elevator-item">
+                <span class="elevator-item-num">F1</span>
+                <span class="elevator-item-text text-ellipsis" data-num="0">商品分类</span>
+            </a>
+            <a href="javascript:;" class="backToTop">
+                <span class="elevator-item-num"><i class="iconfont icon-jiantou"></i></span>
+                <span class="elevator-item-text text-ellipsis" id="backToTop">顶部</span>
+            </a> -->
+
+        </div>
+        <!-- 电梯部分结束 -->
     </div>
 </body>
 <script src="js/utils.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Mock.js/1.0.0/mock.js"></script>
 <script src="mock_data/index.js"></script>
+<script src="libs/carousel/carousel.js"></script>
 <script src="js/index.js"></script>
 
 </html>

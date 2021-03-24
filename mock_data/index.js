@@ -72,5 +72,58 @@ if (USE_MOCK) {
             }
         ]
     })
-
+    Mock.mock(/\/ads\/positionAds/, 'get', {
+        "code": 0,
+        "data|3-7": [
+            {
+                "position": "1",
+                "order": 0,
+                "isShow": "1",
+                "_id": "@string('lower',24)",
+                "name": "@word(4)",
+                "image": "@dataImage('862x440')",
+                "link": "http://mall.kuazhu.com/detail.html?productId=5ea68e9e5dbe7a0023712b03"
+            },
+        ]
+    })
+    Mock.mock('/products/hot', 'get', {
+        "code": 0,
+        "data|4": [
+            {
+                "order": 0,
+                "isShow": "1",
+                "isHot": "1",
+                "payNums|1-9999": 0,
+                "_id": "@string('lower',24)",
+                "name": "@cword(3, 120)",
+                "mainImage": "@dataImage('200x200')",
+                "price|1-9999": 1
+            }
+        ]
+    })
+    Mock.mock('/floors', 'get', {
+        "code": 0,
+        "data|4": [
+            {
+                "title": "@cword(4)",
+                "id": "@string('lower',24)",
+                "products|10": [
+                    {
+                        "status": "1",
+                        "order": 0,
+                        "isShow": "1",
+                        "isHot": "1",
+                        "payNums|1-9999": 0,
+                        "_id": "@string('lower',24)",
+                        "name": "@cword(3, 120)",
+                        "mainImage": "@dataImage('200x200')",
+                        "price|1-9999": 1,
+                        "stock|1-9999": 1,
+                    }
+                ],
+                "order": 0,
+                "num|+1": 1
+            }
+        ]
+    })
 }

@@ -244,63 +244,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.focus .swiper{
+.focus #swiper{
     height: 440px;
     float: right;
     position: relative;
 }
-.focus .swiper .img-wrap{
-    height: 100%;
-    width: 100%;
-}
-.focus .swiper .img-wrap .img-item{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.focus .swiper .img-wrap .img-item img{
-    height: 100%;
-    width: 100%;
-}
-.focus .swiper .arrow{
-    width: 40px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    margin-top: -30px;
-    font-size: 38px;
-    color: #fff;
-    cursor: pointer; 
-}
-.focus .swiper .arrow-left{
-    left: 0;
-}
-.focus .swiper .arrow-right{
-    right: 0;
-}
-.focus .swiper .btn-wrap{
-    width: 175px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -52.5px;
-}
-.focus .swiper .btn-wrap .btn{
-    float: left;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .3);
-    margin-left: 10px;
-    cursor: pointer;
-}
-.focus .swiper .btn-wrap .btn.active{
-    background-color: #52c41a;
-}
+
 /* 热销区域
 ---------------------------------------------------------------- */
 .hot{
@@ -389,4 +338,35 @@
 .footer .copyright{
     text-align: center;
     color: #999;
+}
+/* 电梯
+---------------------------------------------------------------- */
+.elevator{
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left: -600px;
+}
+.elevator-item,.backToTop{
+    display: block;
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-top: 1px solid #d9d9d9;
+}
+.elevator-item:hover .elevator-item-num,
+.backToTop:hover .elevator-item-num,
+.elevator-active .elevator-item-num{
+    display: none;
+}
+.elevator-item:hover .elevator-item-text,
+.backToTop:hover .elevator-item-text,
+.elevator-active .elevator-item-text{
+    display: block;
+    color: #52c41a;
+}
+.elevator-item-text{
+    display: none;
 }
